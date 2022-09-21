@@ -8,17 +8,25 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prettier": "@mediamonks/prettier-config",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@mediamonks/eslint-config-react": "^2.0.1",
+    "@mediamonks/prettier-config": "^1.0.1",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.4",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
+    "lint-staged": "^12.3.7",
+    "prettier": "2.6.2",
+    "sass": "^1.49.11",
     "typescript": "4.8.3"
   }
 }

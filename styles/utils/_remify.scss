@@ -1,0 +1,7 @@
+@function remify($font-size-px, $base-font-size-px: 16) {
+  @if type-of($font-size-px) == "number" and not unitless($font-size-px) {
+    $font-size-px: $font-size-px / ($font-size-px * 0 + 1);
+  }
+
+  @return #{$font-size-px / $base-font-size-px}rem;
+}
