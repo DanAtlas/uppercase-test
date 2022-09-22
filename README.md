@@ -2,7 +2,7 @@
 
 1. Clone this repo:
 
-    `git clone https://github.com/DanAtlas/boilerplate.git`
+    `git clone https://github.com/DanAtlas/next-boilerplate.git`
 
 2. Install all packages:
 
