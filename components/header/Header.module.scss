@@ -1,0 +1,56 @@
+@import '../../styles/globals.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
+
+  @include respond-to(sm) {
+    height: 54px;
+    flex-direction: row;
+  }
+
+  &__search {
+    position: relative;
+    font-size: 14px;
+    margin: 20px 0;
+
+    @include respond-to(sm) {
+      margin: 0;
+    }
+
+    input {
+      background-color: $colorLight;
+      border: 1px solid $colorGrey;
+      border-radius: 5px;
+      padding: 10px 32px 10px 15px;
+      color: $colorLightBlue;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      background: url('/search-icon.png') no-repeat;
+      background-size: 16px 16px;
+      background-position: center;
+    }
+  }
+
+  &__user {
+    & > span {
+      vertical-align: middle;
+    }
+
+    &-copy {
+      font-size: 14px;
+      padding-left: 9px;
+    }
+  }
+}

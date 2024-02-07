@@ -1,5 +1,5 @@
 {
-  "name": "next-boilerplate",
+  "name": "uppersetup",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,8 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-paginate": "^8.2.0"
   },
   "devDependencies": {
     "@mediamonks/eslint-config-react": "^2.5.0",

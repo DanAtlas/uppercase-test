@@ -1,0 +1,44 @@
+@import '../../styles/globals.scss';
+
+.pagination {
+  margin: 84px 0;
+
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+
+    &,
+    li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      &:first-child a {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child a {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    li a {
+      width: 27px;
+      height: 27px;
+      border: 1px solid $colorGrey;
+      background-color: $colorLight;
+      margin-left: -1px;
+      font-size: 12px;
+      line-height: 1;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+
+    li a:hover,
+    li a.pagination__active {
+      background-color: rgba($colorGrey, .5);
+    }
+  }
+}

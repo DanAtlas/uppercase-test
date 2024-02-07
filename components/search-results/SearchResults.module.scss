@@ -1,0 +1,51 @@
+@import '../../styles/globals.scss';
+
+.search-results {
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 55px;
+    font-size: 16px;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      font-size: 22px;
+    }
+
+    span {
+      margin-top: 10px;
+      display: inline-block;
+      border-radius: 5px;
+      padding: 8px 15px;
+      margin-left: 17px;
+      background-color: $colorPurple;
+      color: $colorWhite;
+      font-size: 14px;
+
+      @include respond-to(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 56px 53px;
+    grid-template-columns: repeat(1, 1fr);
+  
+    @include respond-to(xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include respond-to(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    @include respond-to(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

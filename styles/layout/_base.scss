@@ -5,13 +5,14 @@
 }
 
 html,
-body {
+body,
+p {
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'DM Sans', sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -23,12 +24,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.container {
+  width: 100%;
+  max-width: 1185px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }

@@ -1,1 +1,14 @@
 @import '../../styles/globals.scss';
+
+.card {
+  & > span {
+    width: 100% !important;
+    border: 1px solid $colorPurple !important;
+    border-radius: 10px;
+  }
+
+  &__content {
+    margin-top: 23px;
+    padding-left: 13px;
+  }
+}
