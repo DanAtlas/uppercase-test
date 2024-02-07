@@ -9,6 +9,7 @@ const API_URL = "https://www.omdbapi.com/?apikey=8523cbb8";
 
 const Home: NextPage = () => {
   const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState({
     Response: '',
     Search: [],
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
   }
 
   const fetchData = async () => {
+    setIsLoading(true);
     try {
       const response = await fetch(`${API_URL}${search ? `&s=${search}` : ''}&page=${currentPage}`);
       const data = await response.json();
@@ -32,6 +34,7 @@ const Home: NextPage = () => {
       }
 
       setResults(data);
+      setIsLoading(false);
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Error fetching:', error.message);
@@ -66,16 +69,22 @@ const Home: NextPage = () => {
         onSearch={handleSearch} 
       />
       <main>
-        <SearchResults 
-          searchTitle={search}
-          Response={results.Response} 
-          Search={results.Search} 
-          totalResults={results.totalResults} 
-        />
-        <Pagination
-          onPageChange={paginate}
-          pageCount={Math.ceil(Number(results.totalResults) / cardsPerPage)}
-        />
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <div>
+            <SearchResults 
+              searchTitle={search}
+              Response={results.Response} 
+              Search={results.Search} 
+              totalResults={results.totalResults} 
+            />
+            <Pagination
+              onPageChange={paginate}
+              pageCount={Math.ceil(Number(results.totalResults) / cardsPerPage)}
+            />
+          </div>
+        )}
       </main>
     </div>
   )
