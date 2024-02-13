@@ -40,5 +40,11 @@
     li a.pagination__active {
       background-color: rgba($colorGrey, .5);
     }
+
+    li.pagination__disabled a,
+    li.pagination__disabled a:hover {
+      cursor: default;
+      background-color: transparent;
+    }
   }
 }

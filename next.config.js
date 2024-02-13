@@ -8,8 +8,8 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['m.media-amazon.com'],
+    domains: ['m.media-amazon.com', 'ia.media-imdb.com'],
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

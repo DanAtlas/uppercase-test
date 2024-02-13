@@ -82,6 +82,7 @@ const Home: NextPage = () => {
             <Pagination
               onPageChange={paginate}
               pageCount={Math.ceil(Number(results.totalResults) / cardsPerPage)}
+              currentPage={currentPage - 1}
             />
           </div>
         )}

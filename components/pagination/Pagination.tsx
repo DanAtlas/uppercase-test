@@ -5,7 +5,8 @@ import type { PaginationProps } from './Pagination.types';
 
 const Pagination: FC<PaginationProps> = ({
   onPageChange,
-  pageCount
+  pageCount,
+  currentPage
 }) => {
   return (
     <div className={styles['pagination']}>
@@ -20,6 +21,8 @@ const Pagination: FC<PaginationProps> = ({
           previousLinkClassName={styles['pagination__item']}
           nextLinkClassName={styles['pagination__item']}
           activeLinkClassName={styles['pagination__active']}
+          disabledClassName={styles['pagination__disabled']}
+          forcePage={currentPage}
         />
       ) : ''}
     </div>
